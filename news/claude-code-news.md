@@ -6,7 +6,9 @@
 
 ## 2026-04-08
 
-### 版本发布：v2.1.89 – v2.1.94
+### 版本发布：v2.1.89 – v2.1.96
+
+- **v2.1.96（4月8日）** 修复 v2.1.94 引入的 Bedrock 请求 403 回归：使用 `AWS_BEARER_TOKEN_BEDROCK` 或 `CLAUDE_CODE_SKIP_BEDROCK_AUTH` 时会出现 "Authorization header is missing" 错误，本次热修复已恢复正常鉴权流程。[来源](https://github.com/anthropics/claude-code/releases)
 
 - **v2.1.94（4月7日）** 新增 Amazon Bedrock Mantle 支持（通过 `CLAUDE_CODE_USE_MANTLE=1` 启用），API Key、Bedrock、Vertex 等用户的默认 effort 级别提升至 `high`，插件技能名称现统一使用 frontmatter `name` 字段以保证稳定调用名。[来源](https://code.claude.com/docs/en/changelog)
 
