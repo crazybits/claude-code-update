@@ -6,6 +6,12 @@
 
 ## 2026-04-09
 
+### 版本发布：v2.1.98 – Vertex AI 向导、Perforce 集成与安全加固
+
+- **v2.1.98（4月9日）** 新增 **Google Vertex AI 交互式设置向导**（从登录界面"第三方平台"入口可访问，引导完成 GCP 认证、项目/区域配置及模型绑定），并引入 **Perforce 集成**（`CLAUDE_CODE_PERFORCE_MODE` 环境变量，只读文件写入时会给出 `p4 edit` 提示）。新增 **Monitor 工具**用于流式接收后台脚本事件，子进程沙盒在 Linux 上支持 PID 命名空间隔离（需设置 `CLAUDE_CODE_SUBPROCESS_ENV_SCRUB`）。[来源](https://code.claude.com/docs/en/changelog)
+
+- 安全方面修复了 Bash 工具**反斜杠转义标志权限绕过漏洞**和**复合命令绕过强制权限提示**问题；同步修复 MCP OAuth 刷新令牌在 ADFS 等 IdP 下失效、429 重试未应用指数退避等问题。[来源](https://code.claude.com/docs/en/changelog)
+
 ### Auto Mode：基于模型分类器的权限自动审批
 
 - Anthropic 发布 **Auto Mode**，允许将工具调用权限审批委托给模型分类器，介于「逐次手动确认」与「无任何限制」之间，适合自动化流水线场景。这是对现有沙盒机制的补充，提升了无人值守任务的安全性与便捷性。[来源](https://www.anthropic.com/engineering/claude-code-auto-mode)
