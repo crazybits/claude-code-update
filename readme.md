@@ -4,6 +4,22 @@
 
 ---
 
+## 2026-04-10
+
+### 版本发布：v2.1.97 – Focus View、Bedrock 向导与 PowerShell 预览
+
+- **v2.1.97（4月8日）** 新增 **Focus View 切换**（`Ctrl+O`，仅限 `NO_FLICKER` 模式），聚焦后只显示当前提示词、工具摘要（含编辑 diffstat）及最终响应，有效减少视觉噪音；新增状态栏 `refreshInterval` 配置项，支持每 N 秒自动刷新。[来源](https://code.claude.com/docs/en/changelog)
+
+- 新增**互动式 Amazon Bedrock 设置向导**，引导完成 AWS 认证、区域配置与模型绑定，与 Vertex AI 向导流程保持一致；同时上线 **PowerShell 工具（预览版，Windows 专属）**，带有危险命令检测。修复了 MCP HTTP/SSE 连接以约 50MB/小时速率累积未释放缓冲区的内存泄漏问题。[来源](https://code.claude.com/docs/en/changelog)
+
+### Claude Mythos Preview + Project Glasswing：千计零日漏洞被发现
+
+- Anthropic 发布 **Claude Mythos Preview** 的安全评估报告：使用该模型对主流操作系统和浏览器进行扫描，共发现**数千个此前未知的零日漏洞**，其中最古老的漏洞存在于 OpenBSD 中长达 27 年。该模型由 Claude Code 驱动，能自动读取代码、验证假设并输出带 PoC 的漏洞报告。[来源](https://red.anthropic.com/2026/mythos-preview/)
+
+- Anthropic 同步发布 **Project Glasswing**：邀请 AWS、Apple、Cisco、Google、Microsoft、Nvidia 等主要科技企业优先使用 Mythos Preview 开展**防御性安全工作**并向行业共享发现成果，以在攻击者利用类似能力之前抢先修复漏洞。目前 Mythos 仅以受控预览形式向少数合作方开放。[来源](https://fortune.com/2026/04/07/anthropic-claude-mythos-model-project-glasswing-cybersecurity/)
+
+---
+
 ## 2026-04-09
 
 ### 版本发布：v2.1.98 – Vertex AI 向导、Perforce 集成与安全加固
